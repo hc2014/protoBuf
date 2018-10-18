@@ -75,13 +75,11 @@ message ResGetRole{
 }
 ```
 
-然后管理员模式运行命令行:
+保存一下代码为bat文件，放到prtotogen.exe同级目录
 
 ```
-C:\Users\hc>e:
-E:\>cd E:\源码工具\ProtoGen
-E:\源码工具\ProtoGen>protogen.exe -i:protos\Login.proto -o:cs\Login.cs
-protobuf-net:protogen - code generator for .proto
+protoc --descriptor_set_out=MyRequest.protobin --include_imports MyRequest.proto
+protogen MyRequest.protobin
 ```
 
 注意：>protogen.exe -i:protos\Login.proto -o:cs\Login.cs命令的意思是在ProtoGen.exe的目录下  把protos文件夹里面的Login.proto 转换为 cs文件下的 Login.cs文件
